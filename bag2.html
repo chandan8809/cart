@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/0cbcac785e.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    
+    <title>Document</title>
+    <style>
+        .container{
+            font-family: 'Open Sans', sans-serif;
+            padding: 0px 50px;
+
+        }
+        .shopping_bag{
+            display: flex;
+            padding: 20px 70px;
+        
+            font-family: 'Open Sans', sans-serif;
+        }
+        .shopping_bag>div{
+            font-size: 17px;
+            border:.5px solid gray;
+            padding: 10px 25px;
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .shopping2{
+            padding: 1px 70px;
+    
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .shopping2>h1{
+            font-size:25px;
+            font-weight: 400;
+            color: #393939;
+
+        }
+        .shopping2>div{
+            font-size: 15px;
+            line-height: 25px;
+            color:#393939
+
+        }
+        .shopping2>hr{
+            margin-top: 20px;
+        }
+       
+        .maindiv{
+            
+            display: flex;
+            width: 90%;
+            height: 340px;
+            margin: auto;
+            
+        }
+        .imgdiv{
+            height: 200px;
+            width: 100px;
+        
+            margin-left: 10px;
+            padding: 10px;
+        }
+        img{
+            width: 85px;
+            
+        }
+        .contentdiv{
+            height: 340px;
+            width:490px;
+
+            font-family: 'Open Sans', sans-serif;
+
+        }
+        .pricediv{
+            
+            height: 340px;
+            padding: 10px;
+            width: 100px;
+        }
+        
+        .pricediv>span{
+            font-size: 17px;
+            font-weight: bolder;
+            margin-left: 5px;
+            color:#393939;
+        }
+        .qtydiv{
+            height: 340px;
+            width: 42%;
+    
+            padding: 10px;
+            
+        }
+        .qtydiv>span{
+            margin-right: 5px;
+            color: blue;
+            font-size: large;
+        }
+        #product>hr{
+            width: 89.5%;
+        }
+        .namedetaildiv{
+            line-height: 5px;
+            font-family: 'Open Sans', sans-serif;
+
+        }
+        .namedetaildiv>h3{
+            font-size: 14px;
+            color:green;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .namedetaildiv>p{
+            font-size: 14px;
+            color: #393939;
+        }
+        .sizediv{
+            border: 1px solid transparent;
+            color: #393939;
+            line-height: 8px;
+            font-size: 15px;
+        }
+        .sizediv+div{
+            border: 1px solid transparent;
+            font-size:14px;
+            color: #393939;
+            width: 75%;
+            
+            
+        }
+        .sizediv+div>h3{
+            font-weight: 500;
+            font-size: 16px;
+            text-decoration: underline;
+            color: #393939;
+            
+        }
+        .sizediv+div>p{
+            margin-left: 20px;
+            color: #393939;
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .buttondiv>button{
+            background-color: transparent;
+            color: blue;
+            font-size: 14px;
+            padding: 0px 15px;
+            font-family: 'Open Sans', sans-serif;
+            border: 1px solid transparent;
+
+        }
+        .buttondiv>button:hover{
+            color: lightseagreen
+        }
+        .buttondiv{
+            margin-top: 5px;
+        }
+        #leftbox>img{
+            width: 200px;
+        }
+        #subtotal{
+            width: 90%;
+            
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Open Sans', sans-serif;
+            color: #393939;
+        }
+        #rightbox{
+            height: 180px;
+            width: 380px;
+        
+            margin-top: 10px;
+            
+            
+        }
+        #rightbox>button{
+            width: 380px;
+            height: 55px;
+            background-color: black;
+            color: white;
+            border: transparent;
+            font-size: 15px
+            
+        }
+        #rightbox>button:hover{
+            background-color: gray;
+        }
+        #subtotal>h3{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        #subtotal>p{
+            font-weight: bolder;
+        }
+        #hell{
+            line-height: 23px;
+        }
+        #helldiv{
+            width: 350px
+        }
+            
+        
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="header"></div>  <!--Space for Header-->
+
+
+    <div class="container">
+        <div class="shopping_bag">
+            <div style="background-color: gainsboro;">Shopping Bag (<span id="TotalItem">0</span>)</div>
+            <div>Save for Later (O)</div>
+        </div>
+        <div class="shopping2">
+            <h1>Shopping bag</h1>
+            <div style="color:#393939"><i class="fas fa-gift" style="font-size: 23px;"></i> Choose gift options when you check out.<br>
+            Items in your bag are not on hold.</div>
+            <hr>
+        </div>   <!--static part end-->
+
+        <div id="product">
+
+        </div>    <!--product done-->
+
+        <div id="subtotal">
+            <div id="leftbox">
+                <p>Accepted Payment Methods</p>
+                <img src="https://guambar.org/system/userfiles/images/paypal-credit-cards.png">
+                <h3 style="font-weight: 300;font-size: 15px;">Need help? Call 1.888.282.6060 or <span style="color: blue;">chat with us<br>Shipping internationally?</span></h3>
+            </div>
+            <div id="rightbox">
+                <div id="subtotal">
+                    <h3>Subtotal</h3>
+                    <P></P>
+
+                </div>
+                <hr>
+                <button id="gotopay">Check Out</button>
+                
+            </div>
+
+        </div>
+
+       
+    </div>
+    
+</body>
+</html>
+
+<script>
+        obj={}; //this object for calcuation of total price
+        objQty={}
+    
+     
+        var bagc=JSON.parse(localStorage.getItem("bag")) 
+        console.log(bagc)
+
+
+        document.querySelector("#TotalItem").textContent=bagc.length
+
+        function displaycontent(bagc){
+
+        bagc.map(function(elem,index){
+            var maindiv=document.createElement("div")
+            maindiv.className="maindiv";
+            var imgdiv=document.createElement("div")
+            imgdiv.className="imgdiv";
+            var contentdiv=document.createElement("div");
+            contentdiv.className="contentdiv"
+            var qtydiv=document.createElement("div")
+            qtydiv.className="qtydiv"
+            var pricediv=document.createElement("div")
+            pricediv.className="pricediv"            //all divs created
+
+
+            var img=document.createElement("img")
+            img.setAttribute("src",elem.imgUrl)
+            imgdiv.append(img)                       //img added
+
+            //content box start  
+                    //namedetails
+            var namedetail=document.createElement("div")
+            namedetail.className="namedetaildiv"
+            var arrival=document.createElement("h3")
+            arrival.textContent="Arrives before Christmas"
+            
+            var brandname=document.createElement("p")
+            brandname.textContent=elem.brand
+            
+            var prodname=document.createElement("p")
+            prodname.innerHTML=elem.name
+            
+            namedetail.append(arrival,brandname,prodname)
+                      //namedetaails end
+
+                      //sizedetails 
+            var sizediv=document.createElement("div")
+            sizediv.className="sizediv"
+
+            var prodsize=document.createElement("p")
+            prodsize.textContent="Size: "+elem.size
+            
+            var prodcolor=document.createElement("p")
+            prodcolor.innerHTML="Color: "+elem.color
+
+            var itemno=document.createElement("p")
+            itemno.innerHTML="Item: 5923178"
+            
+            sizediv.append(prodsize,prodcolor,itemno)
+            
+
+                       //sizedetails end
+                        //delhivery details
+            var delhiverydiv=document.createElement("div")
+            delhiverydiv.id="helldiv"
+            delhiverydetails=document.createElement("p")
+            var h3=document.createElement("h3")
+            h3.textContent="Delivery"
+            delhiverydetails.textContent="International orders usually arrive within 5-13 business days. We'll give you delivery dates in checkout."
+            delhiverydetails.id="hell"
+            delhiverydiv.append(h3,delhiverydetails)
+
+            
+                       // delhvery end
+
+                       //remove button
+            var buttondiv=document.createElement("div")  
+            buttondiv.className="buttondiv"         
+            var buttonR=document.createElement("button")     
+            buttonR.textContent="Remove"   
+            var buttonS=document.createElement("button")     
+            buttonS.textContent="Save for later"  
+            buttondiv.append(buttonR,buttonS)
+                     //button done
+            //removing item from bag ///////////////////////////////////////////////////////////////
+           
+
+
+
+
+            contentdiv.append(namedetail,sizediv,delhiverydiv,buttondiv)
+            
+            //content box end
+            var quantity=document.createElement("span")
+            quantity.textContent="Qty"
+        
+
+            //Create array of options to be added
+            var array = [1,2,3,4,5,6,7,8,9,10];
+
+            //Create and append select list
+            var selectList = document.createElement("select");
+            selectList.id = "mySelect";
+            qtydiv.append(quantity,selectList);
+
+            //Create and append the options
+            for (var i = 0; i < array.length; i++) {
+                var option = document.createElement("option");
+                option.value = array[i];
+                option.text = array[i];
+                selectList.appendChild(option);
+            }
+            selectList.addEventListener("change",function(){
+                
+                pricediv.textContent=""
+                console.log(selectList.value)
+                price.textContent=Math.floor(elem.price*selectList.value)
+               
+                var priceEachdiv=document.createElement("div")
+                var priceEach=document.createElement("span")
+
+                var Each=document.createElement("span")
+                Each.textContent="(each"
+                Each.style.marginRight="5px"
+                
+                var Eachend=document.createElement("span")
+                Eachend.textContent=")"
+                
+                priceEachdiv.append(Each,priceEach,Eachend)
+
+                priceEach.textContent=Math.floor(elem.price)
+                pricediv.append(rupees,price,priceEachdiv)
+
+                objQty[index]=selectList.value //////////////////////qtyobj
+                console.log(objQty,"gsgajgajg")
+                localStorage.setItem("qtyobj",JSON.stringify(objQty))
+
+                obj[index]=elem.price*selectList.value
+                console.log(obj)
+                var addition=0
+                for(i in obj){
+                    addition+=obj[i]
+                }
+                console.log(addition)
+                localStorage.setItem("addition",Math.floor(addition))
+                document.querySelector("#subtotal>p").textContent="Rs "+Math.floor(addition)
+
+            })
+            //quantity dropdown option
+            obj[index]=elem.price*selectList.value
+            objQty[index]=selectList.value
+
+            buttonR.addEventListener("click",function(){///////////////////////////////////////////////////////////
+                document.querySelector("#product").textContent=""
+                
+                
+                bagc.splice(index,1)
+                console.log("here",index)
+                displaycontent(bagc)
+                document.querySelector("#TotalItem").textContent=bagc.length
+
+                obj[index]=elem.price*selectList.value
+                
+                
+                
+                console.log("addition",addition)
+                addition=0
+                for(i in obj){
+                    addition+=obj[i]
+                }
+                addition-=elem.price*selectList.value
+            
+
+                
+                localStorage.setItem("addition",Math.floor(addition))
+                document.querySelector("#subtotal>p").textContent="Rs "+Math.floor(addition)
+                localStorage.setItem("bag",JSON.stringify(bagc))
+
+            })
+
+            
+            
+
+            
+            var price=document.createElement("span")
+            var rupees=document.createElement("span")
+            rupees.textContent="Rs"
+            
+            price.textContent=Math.floor(elem.price)
+            pricediv.append(rupees,price)                    //price added
+
+
+            var hr=document.createElement("hr")
+            
+
+            
+            maindiv.append(imgdiv,contentdiv,qtydiv,pricediv)
+            
+            document.querySelector("#product").append(maindiv,hr)
+        })
+        }
+
+        displaycontent(bagc)
+
+        //total price calulation
+        console.log(obj)
+        var addition=0
+        for(i in obj){
+            addition+=obj[i]
+        }
+        localStorage.setItem("addition",Math.floor(addition))
+        console.log(objQty,"gsgajgajg")
+
+       
+        document.querySelector("#subtotal>p").textContent="Rs "+Math.floor(addition)
+
+        document.querySelector("#gotopay").addEventListener("click",function(){
+            window.location.href="checkout.html"
+        })
+        
+        
+</script>
