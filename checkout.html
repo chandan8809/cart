@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="//n.nordstrommedia.com/id/169f9507-47b3-44bc-9ad4-9244fe191523.png" sizes="16x16" />
+    <link rel="icon" href="//n.nordstrommedia.com/id/69be546b-0c64-4cd0-8840-67a112d242d7.png" sizes="32x32" />
+    <link rel="icon" href="//n.nordstrommedia.com/id/c4fb2a09-3657-4161-9b79-6412897d9399.png" sizes="96x96" />
     <script src="https://kit.fontawesome.com/0cbcac785e.js" crossorigin="anonymous"></script>
     
     <meta charset="UTF-8">
@@ -311,7 +314,7 @@
                 <input type="checkbox" style="margin-top: 10px;">
                 <span style="font-size: 13px;"> Send me electronic or mail offers from Borderfree. You may opt out at any time.</span>
                 <div id="placeord">
-                    <button>Place Order</button>
+                    <button id="Porder">Place Order</button>
                     <p style="font-size: 14px;">This order total is 100% guaranteed. There will be no additional charges due upon receipt.
                     </p>
                 </div>
@@ -327,7 +330,7 @@
         <div class="rightbox">
             <div class="toporder">
                 <span style="font-size: 21px; font-weight: bolder;padding: 15px 0px;"><i class="fas fa-cart-arrow-down"></i> Your Order</span>
-                <button>Continue</button>
+                <button id="saytq">Continue</button>
                 <div id="usegrid">
                     <div style="display: flex;justify-content: space-between;border:1px solid transparent;height: 40px;">
                         <p>Items</p>
@@ -418,6 +421,19 @@
             alert("Wrong code")
         }
 
+    })
+    document.querySelector("#saytq").addEventListener("click",function(){
+        window.location.href="Thankyou.html"
+    })
+    document.querySelector("#Porder").addEventListener("click",function(){
+        if(document.querySelector("#card>input").value==""){
+            alert("Please fill card details")
+        }
+        else{
+            alert("card added succesfully")
+
+        }
+    
     })
 
 </script>
